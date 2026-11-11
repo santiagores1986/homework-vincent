@@ -15,8 +15,14 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 20
+      - name: Install the check tools
+        run: npm ci
       # No compiler here, but this catches a typo that would break the page.
       - name: Syntax check
         run: node --check calculator.js && node --check app.js
+      - name: Lint
+        run: npm run lint
+      - name: Known security problems in the tools
+        run: npm audit --audit-level=moderate
       - name: Tests
         run: npm test
