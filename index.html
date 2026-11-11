@@ -4,5 +4,20 @@
   <body>
     <h1>Hello Vincent</h1>
     <p>My first page on GitHub.</p>
+
+    <h2>Sum calculator</h2>
+    <input id="a" type="number" placeholder="First number">
+    +
+    <input id="b" type="number" placeholder="Second number">
+    <button onclick="sum()">=</button>
+    <strong id="result"></strong>
+
+    <script>
+      function sum() {
+        const a = Number(document.getElementById("a").value);
+        const b = Number(document.getElementById("b").value);
+        document.getElementById("result").textContent = a + b;
+      }
+    </script>
   </body>
 </html>
