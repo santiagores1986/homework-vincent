@@ -9,15 +9,9 @@
     <input id="a" type="number" placeholder="First number">
     +
     <input id="b" type="number" placeholder="Second number">
-    <button onclick="sum()">=</button>
+    <button id="equals">=</button>
     <strong id="result"></strong>
 
-    <script>
-      function sum() {
-        const a = Number(document.getElementById("a").value);
-        const b = Number(document.getElementById("b").value);
-        document.getElementById("result").textContent = a + b;
-      }
-    </script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
